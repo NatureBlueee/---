@@ -1,0 +1,63 @@
+2024-12-01 14:25:21.203 | ERROR    | __main__:<module>:241 - Application failed to start: Only timezones from the pytz library are supported
+2024-12-01 14:25:37.719 | INFO     | __main__:<module>:239 - Starting application on 127.0.0.1:8080
+2024-12-01 14:25:38.569 | INFO     | __main__:<module>:239 - Starting application on 127.0.0.1:8080
+2024-12-01 14:26:53.244 | INFO     | __main__:upload_file:166 - 开始处理上传请求
+2024-12-01 14:26:53.377 | INFO     | __main__:upload_file:182 - 文件已保存: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\7f563746-9b1c-4934-851c-9f71ad7e6654.m4a
+2024-12-01 14:26:53.382 | INFO     | services.transcription:transcribe:30 - 开始转录请求: http://127.0.0.1:8080/audio/7f563746-9b1c-4934-851c-9f71ad7e6654.m4a
+2024-12-01 14:28:05.941 | ERROR    | services.transcription:transcribe:57 - 转录请求失败: 500 Server Error: Internal Server Error for url: https://bibigpt.co/api/open/xyqEM8MtuKtG/subtitle?url=http%3A%2F%2F127.0.0.1%3A8080%2Faudio%2F7f563746-9b1c-4934-851c-9f71ad7e6654.m4a&audioLanguage=zh
+2024-12-01 14:28:05.941 | INFO     | services.transcription:transcribe:59 - 尝试重试 (1/3)
+2024-12-01 14:28:10.943 | INFO     | services.transcription:transcribe:30 - 开始转录请求: http://127.0.0.1:8080/audio/7f563746-9b1c-4934-851c-9f71ad7e6654.m4a
+2024-12-01 14:29:15.532 | ERROR    | services.transcription:transcribe:57 - 转录请求失败: 500 Server Error: Internal Server Error for url: https://bibigpt.co/api/open/xyqEM8MtuKtG/subtitle?url=http%3A%2F%2F127.0.0.1%3A8080%2Faudio%2F7f563746-9b1c-4934-851c-9f71ad7e6654.m4a&audioLanguage=zh
+2024-12-01 14:29:15.533 | INFO     | services.transcription:transcribe:59 - 尝试重试 (2/3)
+2024-12-01 14:29:20.535 | INFO     | services.transcription:transcribe:30 - 开始转录请求: http://127.0.0.1:8080/audio/7f563746-9b1c-4934-851c-9f71ad7e6654.m4a
+2024-12-01 14:29:29.100 | INFO     | __main__:<module>:239 - Starting application on 127.0.0.1:8080
+2024-12-01 14:29:45.179 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:33:09.163 | INFO     | __main__:upload_file:166 - 开始处理上传请求
+2024-12-01 14:33:09.278 | INFO     | __main__:upload_file:182 - 文件已保存: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\7f9762e2-cfda-4df4-9722-b5d9b8d4242a.m4a
+2024-12-01 14:33:09.279 | INFO     | services.transcription:transcribe:26 - 开始转录请求，文件路径: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\7f9762e2-cfda-4df4-9722-b5d9b8d4242a.m4a
+2024-12-01 14:33:20.973 | ERROR    | services.transcription:transcribe:57 - 转录请求失败: 413 Client Error: Request Entity Too Large for url: https://bibigpt.co/api/open/xyqEM8MtuKtG/subtitle?audioLanguage=zh
+2024-12-01 14:33:20.974 | INFO     | services.transcription:transcribe:59 - 尝试重试 (1/3)
+2024-12-01 14:33:25.976 | INFO     | services.transcription:transcribe:26 - 开始转录请求，文件路径: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\7f9762e2-cfda-4df4-9722-b5d9b8d4242a.m4a
+2024-12-01 14:33:37.575 | ERROR    | services.transcription:transcribe:57 - 转录请求失败: 413 Client Error: Request Entity Too Large for url: https://bibigpt.co/api/open/xyqEM8MtuKtG/subtitle?audioLanguage=zh
+2024-12-01 14:33:37.576 | INFO     | services.transcription:transcribe:59 - 尝试重试 (2/3)
+2024-12-01 14:33:42.578 | INFO     | services.transcription:transcribe:26 - 开始转录请求，文件路径: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\7f9762e2-cfda-4df4-9722-b5d9b8d4242a.m4a
+2024-12-01 14:33:54.093 | ERROR    | services.transcription:transcribe:57 - 转录请求失败: 413 Client Error: Request Entity Too Large for url: https://bibigpt.co/api/open/xyqEM8MtuKtG/subtitle?audioLanguage=zh
+2024-12-01 14:33:54.093 | INFO     | services.transcription:transcribe:59 - 尝试重试 (3/3)
+2024-12-01 14:33:59.095 | INFO     | services.transcription:transcribe:26 - 开始转录请求，文件路径: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\7f9762e2-cfda-4df4-9722-b5d9b8d4242a.m4a
+2024-12-01 14:34:10.894 | ERROR    | services.transcription:transcribe:57 - 转录请求失败: 413 Client Error: Request Entity Too Large for url: https://bibigpt.co/api/open/xyqEM8MtuKtG/subtitle?audioLanguage=zh
+2024-12-01 14:34:10.902 | INFO     | __main__:upload_file:209 - 临时文件已删除: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\7f9762e2-cfda-4df4-9722-b5d9b8d4242a.m4a
+2024-12-01 14:34:10.904 | ERROR    | __main__:upload_file:212 - 处理错误: 转录失败
+2024-12-01 14:38:07.830 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:38:10.155 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:38:11.028 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:38:41.690 | INFO     | __main__:upload_file:166 - 开始处理上传请求
+2024-12-01 14:38:41.766 | INFO     | __main__:upload_file:182 - 文件已保存: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\4e0d8170-30c7-4df5-917b-948f2c5d6ec5.m4a
+2024-12-01 14:39:16.109 | INFO     | services.transcription:transcribe:59 - 文件已上传，URL: https://files.catbox.moe/wigqzs.m4a
+2024-12-01 14:39:16.111 | INFO     | services.transcription:transcribe:68 - 开始转录请求
+2024-12-01 14:40:21.022 | ERROR    | services.transcription:transcribe:95 - 转录请求失败: 500 Server Error: Internal Server Error for url: https://bibigpt.co/api/open/xyqEM8MtuKtG/subtitle?url=https%3A%2F%2Ffiles.catbox.moe%2Fwigqzs.m4a&audioLanguage=zh
+2024-12-01 14:40:21.023 | INFO     | services.transcription:transcribe:97 - 尝试重试 (1/3)
+2024-12-01 14:40:27.959 | ERROR    | services.transcription:upload_to_catbox:45 - 上传文件到 catbox 失败: HTTPSConnectionPool(host='catbox.moe', port=443): Max retries exceeded with url: /user/api.php (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:2406)')))
+2024-12-01 14:40:52.672 | ERROR    | services.transcription:upload_to_transfer_sh:31 - 上传文件失败: HTTPSConnectionPool(host='transfer.sh', port=443): Max retries exceeded with url: /4e0d8170-30c7-4df5-917b-948f2c5d6ec5.m4a (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001AADC3409E0>, 'Connection to transfer.sh timed out. (connect timeout=None)'))
+2024-12-01 14:40:52.675 | ERROR    | services.transcription:transcribe:103 - 转录处理错误: 无法获取文件的公网访问URL
+2024-12-01 14:40:52.678 | INFO     | __main__:upload_file:209 - 临时文件已删除: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\4e0d8170-30c7-4df5-917b-948f2c5d6ec5.m4a
+2024-12-01 14:40:52.678 | ERROR    | __main__:upload_file:212 - 处理错误: 转录失败
+2024-12-01 14:47:47.858 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:47:59.026 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:47:59.885 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:54:52.349 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:54:54.935 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:54:55.856 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 14:55:24.905 | INFO     | __main__:upload_file:166 - 开始处理上传请求
+2024-12-01 14:55:24.991 | INFO     | __main__:upload_file:182 - 文件已保存: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\9809293d-b689-4d4d-a173-da2c613ea90b.m4a
+2024-12-01 14:55:36.735 | INFO     | services.transcription:transcribe:98 - 文件已上传，URL: https://files.catbox.moe/wigqzs.m4a
+2024-12-01 14:55:36.736 | INFO     | services.transcription:transcribe:104 - 开始转录请求
+2024-12-01 14:55:40.913 | INFO     | services.feishu:send_message:44 - 消息发送成功
+2024-12-01 14:55:40.916 | INFO     | __main__:upload_file:209 - 临时文件已删除: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\9809293d-b689-4d4d-a173-da2c613ea90b.m4a
+2024-12-01 15:03:53.881 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 15:04:04.610 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 15:04:33.975 | INFO     | __main__:upload_file:166 - 开始处理上传请求
+2024-12-01 15:04:34.090 | INFO     | __main__:upload_file:182 - 文件已保存: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\b0f8b436-b973-422a-9cd7-8213d4a38589.m4a
+2024-12-01 15:05:10.605 | INFO     | services.transcription:transcribe:98 - 文件已上传，URL: https://files.catbox.moe/wigqzs.m4a
+2024-12-01 15:05:10.606 | INFO     | services.transcription:transcribe:104 - 开始转录请求
+2024-12-01 15:05:14.476 | INFO     | services.feishu:send_message:47 - 消息发送成功
+2024-12-01 15:05:14.478 | INFO     | __main__:upload_file:209 - 临时文件已删除: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\b0f8b436-b973-422a-9cd7-8213d4a38589.m4a
