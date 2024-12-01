@@ -8,6 +8,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from config import Config
 from services.transcription import transcription_service
 from services.feishu import feishu_service
+from services.media import media_service
+from services.monitor import system_monitor
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = Config.MAX_CONTENT_LENGTH
@@ -38,6 +40,17 @@ HTML_TEMPLATE = '''
             text-align: center;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .tips {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .tips h3 {
+            margin-top: 0;
+            color: #2e7d32;
         }
         input[type="file"] {
             margin: 10px 0;
@@ -77,8 +90,13 @@ HTML_TEMPLATE = '''
 <body>
     <div class="upload-form">
         <h2>语音转文字服务</h2>
-        <p>支持格式：mp3, m4a, wav, ogg</p>
-        <p>最大文件大小：16MB</p>
+        <div class="tips">
+            <h3>使用说明</h3>
+            <p>1. 支持的音频格式：mp3, m4a, wav, ogg</p>
+            <p>2. 最大文件大小：32MB</p>
+            <p>3. 如果是视频文件，请先使用iPhone快捷指令转换为音频</p>
+            <p>4. 转换后的文字将自动发送到飞书群</p>
+        </div>
         <form id="uploadForm">
             <input type="file" name="audio" accept="audio/*" required>
             <br>
@@ -159,11 +177,28 @@ def index():
     """渲染主页"""
     return render_template_string(HTML_TEMPLATE)
 
+@app.route('/status')
+def get_status():
+    """获取系统状态"""
+    stats = system_monitor.get_stats()
+    return jsonify(stats)
+
 @app.route('/upload', methods=['POST'])
 def upload_file():
     """处理文件上传和转录"""
     try:
         logger.info("开始处理上传请求")
+        system_monitor.increment_processing_count()
+        
+        # 检查系统资源
+        stats = system_monitor.get_stats()
+        if stats['cpu_percent'] > 80 or stats['memory_percent'] > 80:
+            logger.warning("系统资源使用率过高，拒绝新的请求")
+            return jsonify({
+                'success': False, 
+                'error': '系统负载过高，请稍后重试',
+                'stats': stats
+            }), 503
         
         # 验证文件
         if 'audio' not in request.files:
@@ -197,9 +232,13 @@ def upload_file():
             formatted_text = feishu_service.format_transcript(result['text'], metadata)
             feishu_service.send_message(formatted_text)
             
+            # 获取最终的系统状态
+            final_stats = system_monitor.get_stats()
+            
             return jsonify({
                 'success': True,
-                'text': formatted_text
+                'text': formatted_text,
+                'stats': final_stats
             })
 
         finally:
@@ -207,9 +246,11 @@ def upload_file():
             if os.path.exists(filepath):
                 os.remove(filepath)
                 logger.info(f"临时文件已删除: {filepath}")
+            system_monitor.decrement_processing_count()
 
     except Exception as e:
         logger.error(f"处理错误: {str(e)}")
+        system_monitor.decrement_processing_count()
         return jsonify({'success': False, 'error': str(e)}), 500
 
 @app.route('/audio/<filename>')
@@ -221,6 +262,9 @@ def init_app():
     """初始化应用"""
     # 配置日志
     logger.add("logs/app.log", rotation="500 MB", retention="10 days")
+    
+    # 启动系统监控
+    system_monitor.start_monitoring()
     
     # 启动定时清理任务
     scheduler = BackgroundScheduler()

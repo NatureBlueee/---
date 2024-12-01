@@ -69,3 +69,24 @@
 2024-12-01 15:37:16.080 | INFO     | services.transcription:transcribe:104 - 开始转录请求
 2024-12-01 15:37:20.101 | INFO     | services.feishu:send_message:47 - 消息发送成功
 2024-12-01 15:37:20.105 | INFO     | __main__:upload_file:209 - 临时文件已删除: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\c4706456-c0ae-4024-91cc-e83b9076df5a.m4a
+2024-12-01 15:56:12.958 | INFO     | __main__:<module>:249 - Starting application on 127.0.0.1:8080
+2024-12-01 16:04:22.897 | INFO     | services.monitor:start_monitoring:36 - 系统资源监控已启动
+2024-12-01 16:04:23.030 | INFO     | __main__:<module>:276 - Starting application on 127.0.0.1:8080
+2024-12-01 16:04:23.733 | INFO     | services.monitor:start_monitoring:36 - 系统资源监控已启动
+2024-12-01 16:04:23.869 | INFO     | __main__:<module>:276 - Starting application on 127.0.0.1:8080
+2024-12-01 16:04:23.911 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 9.3%, 内存 91.1%
+2024-12-01 16:04:24.741 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 8.6%, 内存 91.1%
+2024-12-01 16:04:26.916 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 2.4%, 内存 91.0%
+2024-12-01 16:04:27.751 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 3.5%, 内存 91.0%
+2024-12-01 16:04:29.930 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 2.0%, 内存 91.0%
+2024-12-01 16:04:30.760 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 2.3%, 内存 91.0%
+2024-12-01 16:04:32.948 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 4.3%, 内存 91.1%
+2024-12-01 16:04:33.773 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 2.8%, 内存 91.1%
+2024-12-01 16:04:35.959 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 6.1%, 内存 91.2%
+2024-12-01 16:04:36.783 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 4.8%, 内存 91.2%
+2024-12-01 16:04:38.968 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 3.8%, 内存 91.3%
+2024-12-01 16:04:39.795 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 5.7%, 内存 91.3%
+2024-12-01 16:04:41.976 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 1.9%, 内存 91.3%
+2024-12-01 16:04:42.806 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 4.6%, 内存 91.6%
+2024-12-01 16:04:44.988 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 4.1%, 内存 91.6%
+2024-12-01 16:04:45.816 | WARNING  | services.monitor:_monitor_resources:69 - 系统资源使用率过高: CPU 4.0%, 内存 91.6%

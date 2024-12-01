@@ -14,8 +14,8 @@ class Config:
     
     # 文件配置
     UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', '/tmp/audio_uploads')
-    MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB
-    ALLOWED_EXTENSIONS = {'mp3', 'm4a', 'wav', 'ogg'}
+    MAX_CONTENT_LENGTH = 32 * 1024 * 1024  # 32MB，针对音频文件优化
+    ALLOWED_EXTENSIONS = {'mp3', 'm4a', 'wav', 'ogg'}  # 只保留音频格式
     
     # 服务器配置
     HOST = os.getenv('HOST', '0.0.0.0')
@@ -29,4 +29,4 @@ class Config:
     
     # 资源限制
     MAX_WORKERS = 2  # 基于服务器配置（2 CPU）
-    RATE_LIMIT = "20/minute"  # 飞书消息限制 
+    RATE_LIMIT = "20/minute"  # 飞书消息限制
