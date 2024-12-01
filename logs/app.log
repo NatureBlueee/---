@@ -61,3 +61,11 @@
 2024-12-01 15:05:10.606 | INFO     | services.transcription:transcribe:104 - 开始转录请求
 2024-12-01 15:05:14.476 | INFO     | services.feishu:send_message:47 - 消息发送成功
 2024-12-01 15:05:14.478 | INFO     | __main__:upload_file:209 - 临时文件已删除: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\b0f8b436-b973-422a-9cd7-8213d4a38589.m4a
+2024-12-01 15:36:35.686 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 15:36:36.785 | INFO     | __main__:<module>:236 - Starting application on 127.0.0.1:8080
+2024-12-01 15:36:41.305 | INFO     | __main__:upload_file:166 - 开始处理上传请求
+2024-12-01 15:36:41.429 | INFO     | __main__:upload_file:182 - 文件已保存: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\c4706456-c0ae-4024-91cc-e83b9076df5a.m4a
+2024-12-01 15:37:16.078 | INFO     | services.transcription:transcribe:98 - 文件已上传，URL: https://files.catbox.moe/wigqzs.m4a
+2024-12-01 15:37:16.080 | INFO     | services.transcription:transcribe:104 - 开始转录请求
+2024-12-01 15:37:20.101 | INFO     | services.feishu:send_message:47 - 消息发送成功
+2024-12-01 15:37:20.105 | INFO     | __main__:upload_file:209 - 临时文件已删除: C:/Users/Lenovo/Desktop/Toastmaster/数字化/uploads\c4706456-c0ae-4024-91cc-e83b9076df5a.m4a
